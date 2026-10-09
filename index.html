@@ -41,7 +41,6 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
 <img src="images/children-reading.jpg" alt="A smiling girl lies on the grass with a book, beside a row of children reading together in the sunshine" style="flex: 1 1 100%; width: 100%; min-width: 0; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 55%; border-radius: 10px; display: block">
 </div>
 </section>
-
 <section id="why" style="background: #FFFFFF">
 <div style="max-width: 1120px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 48px">
 <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
@@ -179,6 +178,19 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
 </div>
 </section>
 
+<section aria-label="Photo gallery" style="background: #F5F7FA">
+<div style="max-width: 1120px; margin: 0 auto; padding: 72px 24px 88px">
+<div role="region" aria-roledescription="carousel" aria-label="Photos of children reading" style="display: flex; flex-direction: column; gap: 14px">
+<div style="position: relative">
+<img id="gallery-img" src="images/gallery/gallery-01.jpg" alt="Three performers in period work clothes and hats stand on a farm path holding a shovel and hoes" style="width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #16294A; border-radius: 10px; display: block">
+<button type="button" aria-label="Previous photo" id="gallery-prev" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.92); color: #16294A; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button type="button" aria-label="Next photo" id="gallery-next" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.92); color: #16294A; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div>
+<p id="gallery-count" aria-live="polite" style="margin: 0; text-align: center; font-weight: 700; color: #46536B">Photo 1 of 15</p>
+</div>
+</div>
+</section>
+
 <footer style="background: #16294A; color: #DCE4F2">
 <div style="max-width: 1120px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 40px; font-size: 17px">
 <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF">Enduring Families Project: Children's Stories</div>
@@ -187,5 +199,80 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
 </footer>
 
 </div>
+<script>
+(function () {
+  var slides = [
+{
+"src": "images/gallery/gallery-01.jpg",
+"alt": "Three performers in period work clothes and hats stand on a farm path holding a shovel and hoes"
+},
+{
+"src": "images/gallery/gallery-02.jpg",
+"alt": "Three performers in period costume stand in front of a wall of historic portraits of La Crosse residents"
+},
+{
+"src": "images/gallery/gallery-03.jpg",
+"alt": "Book cover: Black Joy, A Healthy Conversation About Race, illustrated by Charlene Mosley"
+},
+{
+"src": "images/gallery/gallery-04.jpg",
+"alt": "Book cover: Black Settlers in Rural Wisconsin, from the State Historical Society of Wisconsin, with a portrait of John Green"
+},
+{
+"src": "images/gallery/gallery-05.jpg",
+"alt": "Three performers in period costume stand before portraits of Zachariah Lewis Moss, John Birney and Orby Moss"
+},
+{
+"src": "images/gallery/gallery-06.jpg",
+"alt": "A smiling young girl with a backpack reads a yellow book"
+},
+{
+"src": "images/gallery/gallery-07.jpg",
+"alt": "Studio portrait of three performers in 19th-century dress: two men in top hats standing behind a seated woman"
+},
+{
+"src": "images/gallery/gallery-08.jpg",
+"alt": "Cover of The Story of George Edwin Taylor coloring book by Adrianne Velasco for the Enduring Families Project, illustrated by Charlene Mosley"
+},
+{
+"src": "images/gallery/gallery-09.jpg",
+"alt": "Cover of Lifting As We Rise: African American Women’s Movement in the 19th Century, by the EFP Children’s Stories Team"
+},
+{
+"src": "images/gallery/gallery-10.jpg",
+"alt": "Hope Restores Black Excellence 2025 Award to EFP Children’s Stories for A Long Way to Find a Home, Darrell Ferguson and Rebecca Mormann-Krieger"
+},
+{
+"src": "images/gallery/gallery-11.jpg",
+"alt": "A performer as George Edwin Taylor speaks to riders on the Juneteenth African-American Living History Bus Tour"
+},
+{
+"src": "images/gallery/gallery-12.jpg",
+"alt": "Performers on the Juneteenth bus tour, beside a sign for Zachariah H. and Ellen Moss, Moss Barbershop 1897 to 1935"
+},
+{
+"src": "images/gallery/gallery-13.jpg",
+"alt": "Juneteenth, A Day of Remembrance: the cast of performers in period costume outside a brick building"
+},
+{
+"src": "images/gallery/gallery-14.jpg",
+"alt": "Flyer for a free public reading of A Long Way to Find a Home by author Darrell Ferguson at La Crosse Public Library"
+},
+{
+"src": "images/gallery/gallery-15.jpg",
+"alt": "A man in a top hat and maroon coat holds a copy of A Long Way to Find a Home"
+}
+];
+  var i = 0, img = document.getElementById('gallery-img'), count = document.getElementById('gallery-count');
+  function show(k) {
+    i = (k + slides.length) % slides.length;
+    img.src = slides[i].src; img.alt = slides[i].alt;
+    count.textContent = 'Photo ' + (i + 1) + ' of ' + slides.length;
+  }
+  document.getElementById('gallery-prev').addEventListener('click', function () { show(i - 1); });
+  document.getElementById('gallery-next').addEventListener('click', function () { show(i + 1); });
+  slides.forEach(function (s) { var p = new Image(); p.src = s.src; });
+})();
+</script>
 </body>
 </html>

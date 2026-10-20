@@ -154,7 +154,7 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
 <p style="margin: 0">Our second book, the story of the 19th-century African American women's movement, is ready for printing. The research is complete. The story is written. What stands between this story and thousands of children is funding.</p>
 <p style="margin: 0">A gift does more than buy a single book. Classroom sets are used year after year, libraries lend them to generation after generation of families, and teachers reuse the lessons and primary documents. Gifts are received through our fiscal sponsor, the La Crosse County Historical Society.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px">
-<a href="#give-now" style="background: #1F6B5C; color: #FFFFFF; font-weight: 700; text-decoration: none; padding: 14px 30px; border-radius: 6px">Give now</a>
+<a href="https://www.lchshistory.org/donate" target="_blank" rel="noopener" data-give-open style="background: #1F6B5C; color: #FFFFFF; font-weight: 700; text-decoration: none; padding: 14px 30px; border-radius: 6px">Give now</a>
 <a href="#signup" style="background: #F4B63F; color: #14213A; font-weight: 700; text-decoration: none; padding: 14px 30px; border-radius: 6px">Remind me on December 1</a>
 </div>
 </div>
@@ -179,7 +179,7 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
 <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 26px; line-height: 1.2; color: #14213A">One quick step so your gift reaches the children's books</div>
 <p style="margin: 0; font-size: 21px; color: #14213A">After you click <strong>Give now</strong>, choose <strong>Enduring Families Project: Children's Stories</strong> from the list of options on the donation form.</p>
 </div>
-<a href="https://www.lchshistory.org/donate" target="_blank" rel="noopener" style="background: #1F6B5C; color: #FFFFFF; font-weight: 700; font-size: 21px; text-decoration: none; padding: 16px 36px; border-radius: 6px">Give now</a>
+<a href="https://www.lchshistory.org/donate" target="_blank" rel="noopener" data-give-open style="background: #1F6B5C; color: #FFFFFF; font-weight: 700; font-size: 21px; text-decoration: none; padding: 16px 36px; border-radius: 6px">Give now</a>
 </div>
 </div>
 </div>
@@ -270,6 +270,26 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
 <div>145 West Avenue South, La Crosse, WI 54601 · (608) 782-1980 · <a href="https://efpcs.org" style="color: #FFFFFF">efpcs.org</a></div>
 </div>
 </footer>
+
+<div id="give-modal" hidden>
+<div data-give-backdrop="1" style="position: fixed; inset: 0; z-index: 50; background: rgba(10, 20, 40, 0.65); display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+<div role="dialog" aria-modal="true" aria-labelledby="give-title" style="background: #FFFFFF; color: #14213A; width: 100%; max-width: 620px; max-height: 88vh; overflow-y: auto; border-radius: 12px; border-top: 8px solid #F4B63F; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: #1F6B5C">Before you give</div>
+<h2 id="give-title" style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.15">One quick step so your gift reaches the children's books</h2>
+</div>
+<button type="button" aria-label="Close" data-give-close style="flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%; border: 0; background: #F5F7FA; color: #16294A; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px"><li style="display: flex; gap: 14px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; background: #1F6B5C; color: #FFFFFF; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center">1</span><span style="font-size: 21px; line-height: 1.45; padding-top: 4px">Click <strong>Continue to donation page</strong> below. The La Crosse County Historical Society's page opens in a new tab. They are our fiscal sponsor.</span></li><li style="display: flex; gap: 14px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; background: #1F6B5C; color: #FFFFFF; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center">2</span><span style="font-size: 21px; line-height: 1.45; padding-top: 4px">On the donation form, choose <strong>Enduring Families Project: Children's Stories</strong> from the list of options.</span></li><li style="display: flex; gap: 14px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; background: #1F6B5C; color: #FFFFFF; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center">3</span><span style="font-size: 21px; line-height: 1.45; padding-top: 4px">Enter your gift amount and finish checkout. Your gift is tax-deductible.</span></li></ol>
+<div style="background: #FFF6E2; border: 2px solid #F4B63F; border-radius: 8px; padding: 16px 18px; font-size: 20px; line-height: 1.4">Look for: <strong>Enduring Families Project: Children's Stories</strong></div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+<a href="https://www.lchshistory.org/donate" target="_blank" rel="noopener" data-give-continue style="background: #1F6B5C; color: #FFFFFF; font-weight: 700; font-size: 21px; text-decoration: none; padding: 16px 32px; border-radius: 6px">Continue to donation page</a>
+<button type="button" data-give-close style="background: none; border: 0; color: #16294A; font-size: 19px; text-decoration: underline; cursor: pointer; padding: 10px 4px">Not now</button>
+</div>
+</div>
+</div>
+</div>
 
 <div id="media-modal" hidden>
 <div data-media-backdrop="1" style="position: fixed; inset: 0; z-index: 50; background: rgba(10, 20, 40, 0.65); display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
@@ -400,6 +420,16 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
   document.querySelectorAll('[data-media-open]').forEach(function (b) { b.addEventListener('click', open); });
   modal.querySelector('[data-media-close]').addEventListener('click', close);
   modal.querySelector('[data-media-backdrop]').addEventListener('click', function (e) { if (e.target === e.currentTarget) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
+})();
+(function () {
+  var modal = document.getElementById('give-modal'), last = null;
+  function open(e) { e.preventDefault(); last = e.currentTarget; modal.hidden = false; document.body.style.overflow = 'hidden'; var d = modal.querySelector('[role=dialog]'); d.scrollTop = 0; modal.querySelector('[data-give-close]').focus({ preventScroll: true }); }
+  function close() { modal.hidden = true; document.body.style.overflow = ''; if (last) last.focus(); }
+  document.querySelectorAll('[data-give-open]').forEach(function (b) { b.addEventListener('click', open); });
+  modal.querySelectorAll('[data-give-close]').forEach(function (b) { b.addEventListener('click', close); });
+  modal.querySelector('[data-give-continue]').addEventListener('click', function () { setTimeout(close, 0); });
+  modal.querySelector('[data-give-backdrop]').addEventListener('click', function (e) { if (e.target === e.currentTarget) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
 })();
 </script>

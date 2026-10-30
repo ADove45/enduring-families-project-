@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Share Your Story | Enduring Families Project: Children's Stories</title>
+<meta name="description" content="Have you discovered a piece of history you never knew? Tell the Enduring Families Project: Children's Stories what you found and what it meant to you.">
+<meta property="og:title" content="Share your story with the Enduring Families Project">
+<meta property="og:description" content="Have you discovered a piece of history you never knew? Tell us what you found and what it meant to you.">
+<meta property="og:image" content="https://givingtuesday.efpcs.org/images/newsletters/2026-11-campaign-underway.jpg">
+<link rel="icon" type="image/png" href="images/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap">
+<style>
+body{margin:0;background:#F5F7FA;color:#14213A;font-family:'Atkinson Hyperlegible',Verdana,sans-serif;font-size:19px;line-height:1.6}
+a{color:#16294A}a:hover{color:#1F6B5C}
+input:focus,textarea:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+header{background:#16294A}
+header .wrap{display:flex;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px}
+header .mark{background:#F7F7F5;border-radius:10px;padding:6px 8px;display:block}
+header img{height:64px;width:auto;display:block}
+header a.name{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#fff;text-decoration:none}
+h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(32px,6vw,46px);line-height:1.1;margin:0 0 14px;color:#16294A}
+.eyebrow{font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#1F6B5C;margin:40px 0 8px}
+.lead{font-size:21px;color:#46536B;margin:0 0 28px}
+form,.thanks{background:#fff;border-top:6px solid #F4B63F;border-radius:10px;padding:28px;box-shadow:0 2px 10px rgba(20,33,58,.06);margin-bottom:28px}
+label,legend{display:block;font-weight:700;margin:0 0 6px}
+.hint{display:block;font-weight:400;font-size:16px;color:#46536B}
+input[type=text],input[type=email],textarea{width:100%;box-sizing:border-box;font:inherit;font-size:18px;padding:12px 14px;border:2px solid #D5DCE8;border-radius:8px;background:#fff;color:#14213A}
+textarea{min-height:200px;resize:vertical}
+.field{margin-bottom:22px}
+fieldset{border:0;padding:0;margin:0 0 24px}
+.choice{display:flex;gap:10px;align-items:flex-start;margin:8px 0;font-weight:400}
+.choice input{width:22px;height:22px;margin-top:4px;flex:0 0 auto;accent-color:#1F6B5C}
+button{font:inherit;font-weight:700;font-size:20px;background:#F4B63F;color:#14213A;border:0;border-radius:6px;padding:14px 34px;cursor:pointer}
+button:hover{background:#e9a92c}
+.honey{position:absolute;left:-9999px}
+.thanks{display:none}
+.thanks h2{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;margin:0 0 10px;color:#16294A}
+footer{background:#16294A;color:#DCE4F2;font-size:15px;text-align:center;padding:24px 20px;margin-top:20px}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mark" href="https://givingtuesday.efpcs.org/"><img src="images/logo-full.png" alt="Enduring Families Project: Children Stories"></a>
+    <a class="name" href="https://givingtuesday.efpcs.org/">Enduring Families Project: Children's Stories</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="eyebrow">Tell Us One Thing</p>
+  <h1>Share your story</h1>
+  <p class="lead">Have you ever discovered a piece of history you never knew about your town, your family or someone like you? Tell us what you found and what it meant to you.</p>
+
+  <div class="thanks" id="thanks" role="status">
+    <h2>Thank you for sharing your story.</h2>
+    <p>We read every story. If you said yes to sharing, we may reach out before including yours in a future newsletter.</p>
+    <p><a href="https://givingtuesday.efpcs.org/"><strong>Back to our Giving Tuesday page</strong></a></p>
+  </div>
+
+  <form id="story-form" action="https://formsubmit.co/info@efpcs.org" method="POST">
+    <input type="hidden" name="_subject" value="A piece of history I discovered (story from givingtuesday.efpcs.org)">
+    <input type="hidden" name="_next" value="https://givingtuesday.efpcs.org/share-your-story.html?thanks=1">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="field">
+      <label for="story">Your story <span class="hint">What did you discover, and what did it mean to you?</span></label>
+      <textarea id="story" name="Story" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="Name" autocomplete="name" required>
+    </div>
+
+    <div class="field">
+      <label for="email">Your email <span class="hint">So we can thank you, and ask before sharing anything.</span></label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+    </div>
+
+    <fieldset>
+      <legend>May we share your story?</legend>
+      <label class="choice"><input type="radio" name="Permission to share" value="Yes, with my first name" required> Yes, with my first name</label>
+      <label class="choice"><input type="radio" name="Permission to share" value="Yes, without my name"> Yes, without my name</label>
+      <label class="choice"><input type="radio" name="Permission to share" value="No, this is just for you"> No, this is just for you</label>
+    </fieldset>
+
+    <button type="submit">Send my story</button>
+  </form>
+</main>
+
+<footer>
+  <strong style="color:#fff">Enduring Families Project: Children's Stories</strong><br>
+  <a href="https://givingtuesday.efpcs.org/">givingtuesday.efpcs.org</a> &middot; <a href="https://efpcs.org">efpcs.org</a> &middot; <a href="https://www.facebook.com/efpcslacrosse">Facebook</a>
+</footer>
+
+<script>
+  if (new URLSearchParams(location.search).has('thanks')) {
+    document.getElementById('story-form').style.display = 'none';
+    document.getElementById('thanks').style.display = 'block';
+  }
+</script>
+</body>
+</html>

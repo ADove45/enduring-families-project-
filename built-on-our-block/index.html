@@ -430,7 +430,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
         <li>Entry is free. Each entrant or group may submit up to 2 videos.</li>
       </ol></div>
     </details>
-    <details>
+    <details id="requirements">
       <summary>Video requirements</summary>
       <div class="det-body"><ol start="4">
         <li>Videos must be 2 minutes or less, including credits.</li>
@@ -450,7 +450,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
         <li>By submitting, entrants give the Enduring Families Project: Children's Stories permission to share the video, its title and the entrant's name (first name and last initial for entrants under 18) on EFP's website, social media and in educational materials, with credit, at no cost.</li>
       </ol></div>
     </details>
-    <details>
+    <details id="judging">
       <summary>Judging and prizes</summary>
       <div class="det-body"><ol start="14">
         <li>Entries are judged on storytelling, connection to the business and its community, creativity, and respect for the history shared. Production budget is not a factor.</li>
@@ -533,6 +533,10 @@ const SUBMIT_URL = "";
     }
   });
 })();
+</script>
+<script>
+(function(){function openHash(){var el=document.getElementById(location.hash.slice(1));if(el&&el.tagName==="DETAILS"){el.open=true;el.scrollIntoView();}}
+window.addEventListener("hashchange",openHash);window.addEventListener("load",openHash);})();
 </script>
 </body>
 </html>

@@ -289,9 +289,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
         <span class="free">Free</span>
       </article>
       <article class="shop c4">
-        <div class="sign"><small>SCHOOLS &amp; GROUPS</small><h3>Classroom / Group</h3></div>
+        <div class="sign"><small>CLUBS &amp; ORGANIZATIONS</small><h3>Group</h3></div>
         <div class="stripes" aria-hidden="true"></div>
-        <p>For classrooms, homeschool groups, after-school programs, libraries and youth groups. Split the work into researchers, interviewers, camera operators and narrators. The teacher or group leader submits the entry.</p>
+        <p>For homeschool groups, after-school programs, libraries, youth groups, clubs and community organizations. Split the work into researchers, interviewers, camera operators and narrators. The group leader submits the entry.</p>
         <span class="free">Free</span>
       </article>
     </div>
@@ -378,10 +378,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
           <option>Young Storytellers (8–12)</option>
           <option>Teen Storytellers (13–17)</option>
           <option>Adult / Community (18+)</option>
-          <option>Classroom / Group</option>
+          <option>Group</option>
         </select>
       </div>
-      <div class="field" id="guardianField"><label for="f-guardian">Parent, guardian or teacher submitting this entry <span class="req">*</span></label><p class="hint">Required for entrants under 18 and for Classroom / Group entries.</p><input type="text" id="f-guardian"></div>
+      <div class="field" id="guardianField"><label for="f-guardian">Parent, guardian, teacher or group leader submitting this entry <span class="req">*</span></label><p class="hint">Required for entrants under 18 and for Group entries.</p><input type="text" id="f-guardian"></div>
       <div class="row2">
         <div class="field"><label for="f-title">Video title <span class="req">*</span></label><input type="text" id="f-title"></div>
         <div class="field"><label for="f-link">YouTube or Vimeo link <span class="req">*</span></label><input type="url" id="f-link" placeholder="https://youtu.be/..."></div>
@@ -425,7 +425,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
     <details open>
       <summary>Eligibility</summary>
       <div class="det-body"><ol>
-        <li>Open to storytellers of all ages in four categories: Young Storytellers (8–12), Teen Storytellers (13–17), Adult / Community (18+) and Classroom / Group.</li>
+        <li>Open to storytellers of all ages in four categories: Young Storytellers (8–12), Teen Storytellers (13–17), Adult / Community (18+) and Group.</li>
         <li>Entrants under 18 must submit through a parent, guardian or teacher, who accepts these rules on the entrant's behalf.</li>
         <li>Entry is free. Each entrant or group may submit up to 2 videos.</li>
       </ol></div>
@@ -456,7 +456,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
         <li>Entries are judged on storytelling, connection to the business and its community, creativity, and respect for the history shared. Production budget is not a factor.</li>
         <li>Cash prizes are awarded from all entries across all categories: First Place $100, Second Place $75, Third Place $50.</li>
         <li>Honors (Legacy Award, Still Standing Award, Young Voices Award) carry no cash prize.</li>
-        <li>For entrants under 18 and Classroom / Group entries, prizes are paid to the parent, guardian, teacher or organization that submitted the entry.</li>
+        <li>For entrants under 18 and Group entries, prizes are paid to the parent, guardian, teacher, group leader or organization that submitted the entry.</li>
         <li>Winners must reply within 14 days of notification to claim their prize, or an alternate winner may be chosen.</li>
         <li>Winners may need to provide tax information (such as a W-9) before a prize is paid.</li>
         <li>Judges' decisions are final.</li>
@@ -484,7 +484,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
     <details><summary>Do I need fancy equipment?</summary><div class="det-body"><p style="margin:0">No. A phone or tablet is enough. We judge the story, not the budget. Film sideways (landscape) and stand close when someone is talking so we can hear them.</p></div></details>
     <details><summary>The business closed years ago. Can I still enter?</summary><div class="det-body"><p style="margin:0">Yes. Film the building or the site where it stood, and tell us what used to be there. Old photos can be added, as long as the real place is on camera too.</p></div></details>
     <details><summary>Does it have to be in my town?</summary><div class="det-body"><p style="margin:0">No. Any Black-owned business, anywhere, as long as you can film there in person.</p></div></details>
-    <details><summary>Can my whole class make one video?</summary><div class="det-body"><p style="margin:0">Yes. Enter the Classroom / Group category. The teacher or group leader submits the entry.</p></div></details>
+    <details><summary>Can our group make one video together?</summary><div class="det-body"><p style="margin:0">Yes. Enter the Group category. The group leader submits the entry.</p></div></details>
   </div>
 </section>
 
@@ -503,7 +503,7 @@ const SUBMIT_URL = "";
 (function(){
   const $ = id => document.getElementById(id);
   const form = $("entryForm"), err = $("formErr"), done = $("done"), btn = $("submitBtn");
-  function catNeedsGuardian(){ return /8–12|13–17|Classroom/.test($("f-category").value); }
+  function catNeedsGuardian(){ return /8–12|13–17|Group/.test($("f-category").value); }
   function validLink(u){ return /^https?:\/\/(www\.|m\.)?(youtube\.com|youtu\.be|vimeo\.com|player\.vimeo\.com)\//i.test(u.trim()); }
   form.addEventListener("submit", async function(e){
     e.preventDefault();

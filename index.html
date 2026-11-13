@@ -452,6 +452,15 @@ input:focus,a:focus,button:focus{outline:3px solid #1F6B5C;outline-offset:2px}
   modal.querySelector('[data-give-continue]').addEventListener('click', function () { setTimeout(close, 0); });
   modal.querySelector('[data-give-backdrop]').addEventListener('click', function (e) { if (e.target === e.currentTarget) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
+  // Links to givingtuesday.efpcs.org/#donate (newsletters, social posts) open the donation notice first
+  function openFromLink() {
+    if (location.hash !== '#donate') return;
+    var btn = document.querySelector('#give-now [data-give-open]');
+    if (btn) btn.scrollIntoView({ block: 'center' });
+    open({ preventDefault: function () {}, currentTarget: btn });
+  }
+  openFromLink();
+  window.addEventListener('hashchange', openFromLink);
 })();
 </script>
 </body>
